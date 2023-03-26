@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app.test:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: basedatos-1.0.0/app
+    ports:
+      - 80:8080
+    volumes:
+      - ".:/app"
