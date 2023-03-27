@@ -1,6 +1,8 @@
 package com.basedatos.basededatos.models;
 
 import jakarta.persistence.*;
+
+
 @Entity
 @Table(schema = "lessors") // Arrendador
 public class LessorsModel {

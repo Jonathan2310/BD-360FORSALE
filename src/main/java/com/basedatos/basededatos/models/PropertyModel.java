@@ -39,11 +39,16 @@ public class PropertyModel {
     @Column(name = "video", nullable = true)
     private byte[] video;
 
+    // Estado enajenadao ("alquilado")
+    @Column(name = " alienated_status", nullable = false)
+    private Boolean alienatedStatus;
+
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private LessorsModel lessor;
 
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private TenantsModel tenant;
+
 
     public long getId() {
         return id;
@@ -139,5 +144,13 @@ public class PropertyModel {
 
     public void setTenant(TenantsModel tenant) {
         this.tenant = tenant;
+    }
+
+    public Boolean getAlienatedStatus() {
+        return alienatedStatus;
+    }
+
+    public void setAlienatedStatus(Boolean alienatedStatus) {
+        this.alienatedStatus = alienatedStatus;
     }
 }
