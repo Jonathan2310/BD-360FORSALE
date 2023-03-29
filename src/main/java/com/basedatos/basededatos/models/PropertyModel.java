@@ -36,9 +36,11 @@ public class PropertyModel {
     private Boolean alienatedStatus;
 
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "lessor_id", referencedColumnName = "id")
     private LessorsModel lessor;
 
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "tenant_id", referencedColumnName = "id")
     private TenantsModel tenant;
 
 
