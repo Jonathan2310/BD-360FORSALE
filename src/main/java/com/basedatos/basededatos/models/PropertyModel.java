@@ -31,14 +31,6 @@ public class PropertyModel {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Lob
-    @Column(name = "images", nullable = false)
-    private byte[] images;
-
-    @Lob
-    @Column(name = "video", nullable = true)
-    private byte[] video;
-
     // Estado enajenadao ("alquilado")
     @Column(name = " alienated_status", nullable = false)
     private Boolean alienatedStatus;
@@ -112,22 +104,6 @@ public class PropertyModel {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public byte[] getImages() {
-        return images;
-    }
-
-    public void setImages(byte[] images) {
-        this.images = images;
-    }
-
-    public byte[] getVideo() {
-        return video;
-    }
-
-    public void setVideo(byte[] video) {
-        this.video = video;
     }
 
     public LessorsModel getLessor() {
