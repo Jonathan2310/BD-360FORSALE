@@ -9,7 +9,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/lessor") // Arrendador
+@RequestMapping("/lessor") // Arrendador este nombre de aca
 public class LessorController {
 
     @Autowired
